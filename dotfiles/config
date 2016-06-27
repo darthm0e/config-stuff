@@ -1,0 +1,102 @@
+Host enigma42
+	HostName vpn.enigma42.de
+	User m0e
+	Port 42022
+	LocalForward 7443 192.168.0.23:8443
+	LocalForward 8443 192.168.0.1:443	
+	LocalForward 9443 192.168.0.5:443
+	LocalForward 8900 192.168.0.5:5900
+	LocalForward 8901 192.168.0.5:5901
+	ServerAliveInterval 60
+	ServerAliveCountMax 30
+	LogLevel VERBOSE
+	
+Host archvsg
+        HostName 192.168.0.37
+        User m0e
+	ForwardX11 yes
+
+Host dockerino
+        HostName 192.168.0.63
+        User m0e
+        ForwardX11 no
+
+Host fileserv
+	HostName 192.168.0.23
+	User m0e
+
+
+Host fileserv-rem
+        ProxyCommand ssh -p 42022 vpn.enigma42.de -W %h:%p
+        HostName 192.168.0.23
+#	LocalForward 9443 192.168.0.5:443
+#	LocalForward 8443 192.168.0.1:443
+        User m0e
+	
+Host obama
+	HostName 192.168.0.5
+	User root
+
+Host obama-rem
+        ProxyCommand ssh -p 42022 vpn.enigma42.de -W %h:%p
+	HostName 192.168.0.5
+        User root
+	
+Host enigma
+        HostName 192.168.0.4
+        Port 22
+        User m0e
+
+Host volkszaehler
+        HostName 192.168.2.230
+        Port 22
+        User pi
+
+Host TemPi
+        HostName 192.168.2.249
+        Port 22
+        User pi
+
+Host VPN-Enigma
+	HostName 217.91.155.36
+	Port 42022
+	User m0e
+
+Host freenas
+        HostName 192.168.0.62
+        Port 22
+        User m0e
+
+Host greenb0x
+	Hostname greenb0x.ddns.net
+	port 42022
+	user pi
+
+Host logkobold
+        HostName 192.168.0.4
+        Port 22
+        User root
+
+Host banaNAS
+        HostName 192.168.2.2
+        Port 22
+        User m0e
+
+Host lancom
+        HostName 192.168.0.1
+        Port 40022
+        User root
+
+
+### default for all ##
+Host *
+     ForwardAgent no
+     ForwardX11 no
+     ForwardX11Trusted yes
+     User m0e
+#    Port 22
+     Protocol 2
+     ServerAliveInterval 60
+     ServerAliveCountMax 30
+     IdentityFile ~/.ssh/id_ed25519
+	LogLevel DEBUG1

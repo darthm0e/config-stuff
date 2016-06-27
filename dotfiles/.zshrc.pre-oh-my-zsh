@@ -1,0 +1,60 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/root/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+#Aliases
+alias ll='ls -al --color=auto'
+alias lh='ls -alh --color=auto'
+alias xterm='xterm -bg black -fg green'
+alias sysupd='sudo pacman -Syu'
+alias sysclean='sudo pacman -Rns $(pacman -Qtdq)'
+
+
+#powerline shell
+function powerline_precmd() {
+    PS1="$(~/GIT/powerline-shell/powerline-shell.py $? --mode compatible --cwd-mode fancy --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+#eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+#eval "$(thefuck --alias FUCK)"
+eval "$(thefuck --alias fuck)"
+
+#MESSAGE="              Welcome to my computer! Pacman says hi too!"
+# draw pacman everytime the terminal is opened
+/home/m0e/GIT/pacman-terminal/pacTerm
+#echo $MESSAGE
+fortune
+# display pacman even if the user wants to clear
+# the terminal
+alias clear='clear; /home/m0e/GIT/pacman-terminal/pacTerm; echo $MESSAGE'
+
+# set title of current terminal 
+setTerminalTitle(){ echo -ne "\033]0;${1}\007" } 
+alias termttl=setTerminalTitle
+
+
+
+## Console Lock
+#export TMOUT=600
+#function TRAPALRM() { vlock }

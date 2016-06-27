@@ -1,0 +1,188 @@
+{
+"architecture":"amd64",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"config":{"Hostname":"907ff48b4f63",
+"Domainname":"",
+"User":"",
+"AttachStdin":false,
+"AttachStdout":false,
+"AttachStderr":false,
+"ExposedPorts":{"80/tcp":{}},
+"Tty":false,
+"OpenStdin":false,
+"StdinOnce":false,
+"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+"WALLABAG_VERSION=2.0.5",
+"SYMFONY__ENV__DATABASE_DRIVER=pdo_sqlite",
+"SYMFONY__ENV__DATABASE_HOST=127.0.0.1",
+"SYMFONY__ENV__DATABASE_PORT=~",
+"SYMFONY__ENV__DATABASE_NAME=symfony",
+"SYMFONY__ENV__DATABASE_USER=root",
+"SYMFONY__ENV__DATABASE_PASSWORD=~",
+"SYMFONY__ENV__SECRET=ovmpmAWXRCabNlMgzlzFXDYmCFfzGv",
+"SYMFONY__ENV__MAILER_HOST=127.0.0.1",
+"SYMFONY__ENV__MAILER_USER=~",
+"SYMFONY__ENV__MAILER_PASSWORD=~",
+"SYMFONY__ENV__FROM_EMAIL=wallabag@example.com"],
+"Cmd":["wallabag"],
+"ArgsEscaped":true,
+"Image":"sha256:11e33f7bcf904f354a9d5d539b1b55e571bd0c3d832bc425d5ed51b9bec70f10",
+"Volumes":null,
+"WorkingDir":"",
+"Entrypoint":["/entrypoint.sh"],
+"OnBuild":[],
+"Labels":{}},
+"container":"d0c4a8771f73a94ed5caabe6f6b6b965cb7735072e6e5f0d08002e6183891132",
+"container_config":{"Hostname":"907ff48b4f63","Domainname":"",
+"User":"",
+"AttachStdin":false,
+"AttachStdout":false,
+"AttachStderr":false,
+"ExposedPorts":{"80/tcp":{}},
+"Tty":false,
+"OpenStdin":false,
+"StdinOnce":false,
+"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+"WALLABAG_VERSION=2.0.5",
+"SYMFONY__ENV__DATABASE_DRIVER=pdo_sqlite",
+"SYMFONY__ENV__DATABASE_HOST=127.0.0.1",
+"SYMFONY__ENV__DATABASE_PORT=~",
+"SYMFONY__ENV__DATABASE_NAME=symfony",
+"SYMFONY__ENV__DATABASE_USER=root",
+"SYMFONY__ENV__DATABASE_PASSWORD=~",
+"SYMFONY__ENV__SECRET=ovmpmAWXRCabNlMgzlzFXDYmCFfzGv",
+"SYMFONY__ENV__MAILER_HOST=127.0.0.1",
+"SYMFONY__ENV__MAILER_USER=~",
+"SYMFONY__ENV__MAILER_PASSWORD=~",
+"SYMFONY__ENV__FROM_EMAIL=wallabag@example.com"],
+"Cmd":["/bin/sh","-c","#(nop) CMD [\"wallabag\"]"],
+"ArgsEscaped":true,
+"Image":"sha256:11e33f7bcf904f354a9d5d539b1b55e571bd0c3d832bc425d5ed51b9bec70f10",
+"Volumes":null,
+"WorkingDir":"",
+"Entrypoint":["/entrypoint.sh"],
+"OnBuild":[],
+"Labels":{}},
+"created":"2016-06-13T07:29:54.883416491Z",
+"docker_version":"1.11.1",
+"history":[
+{
+"created":"2016-06-02T21:43:39.900065572Z",
+"created_by":"/bin/sh -c #(nop) ADD file:5cb42466c4373a3cb324af1e0225d78fabd50b4ce541862407c6a53832e650bc in /"
+},
+{
+"created":"2016-06-13T07:27:50.199843061Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c #(nop) MAINTAINER Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"empty_layer":true
+},
+{
+"created":"2016-06-13T07:27:50.37713072Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c #(nop) ENV WALLABAG_VERSION=2.0.5 
+SYMFONY__ENV__DATABASE_DRIVER=pdo_sqlite 
+SYMFONY__ENV__DATABASE_HOST=127.0.0.1 
+SYMFONY__ENV__DATABASE_PORT=~ 
+SYMFONY__ENV__DATABASE_NAME=symfony 
+SYMFONY__ENV__DATABASE_USER=root 
+SYMFONY__ENV__DATABASE_PASSWORD=~ 
+SYMFONY__ENV__SECRET=ovmpmAWXRCabNlMgzlzFXDYmCFfzGv 
+SYMFONY__ENV__MAILER_HOST=127.0.0.1 
+SYMFONY__ENV__MAILER_USER=~ 
+SYMFONY__ENV__MAILER_PASSWORD=~ 
+SYMFONY__ENV__FROM_EMAIL=wallabag@example.com",
+"empty_layer":true
+},
+
+{
+"created":"2016-06-13T07:28:12.897435015Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c echo \"
+@testing http://dl-4.alpinelinux.org/alpine/edge/testing\" 
+\u003e\u003e /etc/apk/repositories  \u0026\u0026 apk add --update       ansible       curl       git       libwebp@testing       mariadb-client       nginx       pcre       php7       php7-ctype@testing       php7-curl@testing       php7-dom@testing       php7-fpm@testing       php7-gd@testing       php7-gettext@testing       php7-iconv@testing       php7-json@testing       php7-mbstring@testing       php7-openssl@testing       php7-pdo_mysql@testing       php7-pdo_pgsql@testing       php7-pdo_sqlite@testing       php7-phar@testing       php7-session@testing       php7-xml@testing       php7@testing      py-mysqldb       py-psycopg2       py-simplejson       s6  \u0026\u0026 rm -rf /var/cache/apk/*"
+},
+
+{
+"created":"2016-06-13T07:28:14.748675669Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c ln -s /usr/bin/php7 /usr/bin/php  \u0026\u0026 ln -sf /dev/stdout /var/log/nginx/access.log  \u0026\u0026 ln -sf /dev/stderr /var/log/nginx/error.log"
+},
+
+{
+"created":"2016-06-13T07:28:18.817345869Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c curl -s http://getcomposer.org/installer | php  \u0026\u0026 mv composer.phar /usr/local/bin/composer"
+},
+
+{
+"created":"2016-06-13T07:28:21.80305132Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c git clone --branch $WALLABAG_VERSION --depth 1 https://github.com/wallabag/wallabag.git /var/www/wallabag"
+},
+
+{
+"created":"2016-06-13T07:28:23.2861174Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c #(nop) COPY dir:3b05c735e50024558c323d243e0d47c24f36f78c47586a47a7bc60f9b705132f in /"
+},
+{
+"created":"2016-06-13T07:29:09.730696971Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c cd /var/www/wallabag  \u0026\u0026 SYMFONY_ENV=prod composer install --no-dev -o --prefer-dist"
+},
+{
+"created":"2016-06-13T07:29:32.079156053Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":"/bin/sh -c chown -R nobody:nobody /var/www/wallabag"
+},
+{
+"created":"2016-06-13T07:29:38.15678405Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c chmod +x /entrypoint.sh"
+},
+
+{
+"created":"2016-06-13T07:29:43.202902836Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c #(nop) 
+EXPOSE 80/tcp",
+"empty_layer":true
+},
+
+{
+"created":"2016-06-13T07:29:48.971843351Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c #(nop) ENTRYPOINT [\"/entrypoint.sh\"]",
+"empty_layer":true
+},
+{
+"created":"2016-06-13T07:29:54.883416491Z",
+"author":"Marvin Steadfast \u003cmarvin@xsteadfastx.org\u003e",
+"created_by":
+"/bin/sh -c #(nop) CMD [\"wallabag\"]",
+"empty_layer":true
+}
+],
+"os":"linux",
+"rootfs":
+{
+"type":
+"layers",
+"diff_ids":["sha256:cd69d53cf08ef90b8db70c615acc87f7f0c2d8613052654d30d7f4f6a1850cb3",
+"sha256:60ba9c2d4d606bcc177d2f87647ce025f8dfc29011d7c9164f787ccd8897e22b",
+"sha256:e8cd1511e36be86d486d98a2d4fd7b85a9d9daa085c4a22b76004e6fd3543be5",
+"sha256:ebc64189ac34b27d305710a11cfd47843faffca86128ea219094f93d0cde135e",
+"sha256:e08f19185e222a66c4d5bbf98462ec1c04f321fcd8eaac50eda3f04dad72c200",
+"sha256:d849bf5eba1bb4ff3f4d2ab2575f22012fc230a27bd22ef8060cd62a9862c326",
+"sha256:8589033966ab9c6df3d12258d858fe3160ee51dfbf69912db0e7c0e34a88dd19",
+"sha256:e2427426fc8a461a8fa68db1175185ac1792622c882e50f46d06c9d77945454e",
+"sha256:3eb52b66751aea38c4a55b71cef875b86695803df5ad50e314c25a1091054c83"
+]
+}
+}
